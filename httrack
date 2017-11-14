@@ -1,0 +1,55 @@
+#!/data/data/com.termux/files/usr/bash
+clear
+echo "        --------------€|eViL--------------"
+echo
+echo "           -----------Hax4Us-------"
+echo
+echo " A script to install httrack (compiled version for termux) in your termux"
+dir=$HOME/httrack
+echo
+echo "Updating and upgrading ....."
+echo
+sleep 3
+apt update && apt upgrade
+clear
+echo
+echo "installing dependencies ....."
+echo
+sleep 3
+apt install git clang make wget termux-elf-cleaner
+clear
+echo
+echo "Downloading httrack ....."
+echo
+sleep 3
+wget https://hax4us.github.io/Httrack/httrack.tar.gz
+clear
+echo
+echo "Extracting ...."
+echo
+sleep 3
+tar -xvf $HOME/httrack.tar.gz
+clear
+cd $dir
+echo
+echo "please wait while setting up ...."
+echo
+sleep 2
+sh configure --prefix=$PREFIX && make -j8 && make install
+clear
+echo
+echo "cleaning unused dt_entry ...."
+echo
+sleep 2
+termux-elf-cleaner $PREFIX/bin/httrack
+termux-elf-cleaner $PREFIX/lib/libhtsjava.so.2.0.49
+apt remove termux-exec
+clear
+echo
+echo "removing httrack tar file ...."
+sleep 1
+rm $HOME/httrack.tar.gz
+clear
+echo "Hii guys.. :D yeah its me (Hax4Us-€|eViL) and now you can use httrack just by this command :-> httrack"
+echo
+echo "happy cloning .... :D"
