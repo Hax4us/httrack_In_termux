@@ -16,7 +16,7 @@ echo
 echo "installing dependencies ....."
 echo
 sleep 3
-apt install git clang make wget termux-elf-cleaner
+apt install git clang make wget termux-elf-cleaner tar openssl openssl-dev -y
 clear
 echo
 echo "Downloading httrack ....."
@@ -43,10 +43,11 @@ echo
 sleep 2
 termux-elf-cleaner $PREFIX/bin/httrack
 termux-elf-cleaner $PREFIX/lib/libhtsjava.so.2.0.49
-apt remove termux-exec
+apt remove termux-exec -y
 clear
 echo
 echo "removing httrack tar file ...."
+echo
 sleep 1
 rm $HOME/httrack.tar.gz
 clear
