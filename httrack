@@ -22,7 +22,7 @@ echo
 echo "Downloading httrack ....."
 echo
 sleep 3
-wget https://hax4us.github.io/Httrack/httrack.tar.gz
+wget https://hax4us.github.io/httrack.tar.gz
 clear
 echo
 echo "Extracting ...."
