@@ -22,7 +22,7 @@ echo
 echo "Downloading httrack ....."
 echo
 sleep 3
-wget https://hax4us.github.io/httrack.tar.gz
+wget https://hax4us.github.io/Httrack/httrack.tar.gz
 clear
 echo
 echo "Extracting ...."
@@ -35,6 +35,7 @@ echo
 echo "please wait while setting up ...."
 echo
 sleep 2
+export CFLAGS="-DHTS_DO_NOT_USE_FTIME"
 sh configure --prefix=$PREFIX && make -j8 && make install
 clear
 echo
