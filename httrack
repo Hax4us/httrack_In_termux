@@ -51,7 +51,10 @@ echo
 sleep 1
 rm $HOME/httrack.tar.gz
 clear
-echo "Hii guys.. :D yeah its me (Hax4Us-€|eViL) and now you can use httrack just by this command :-> httrack"
+echo
+echo "Hii guys.. :D yeah its me (Hax4Us-€|eViL) and now you can use httrack just by this command but before that plz restart your termux :-> httrack"
 echo
 echo "happy cloning .... :D"
+sleep 2
+clear
 apt remove termux-exec -y
